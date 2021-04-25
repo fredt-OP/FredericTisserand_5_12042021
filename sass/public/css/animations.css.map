@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../../Utils/animations.scss"
+    ],
+    "names": [],
+    "file": "animations.css"
+}
