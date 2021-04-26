@@ -18,7 +18,7 @@ header {
     justify-content: space-between;
     background-color: $primary;
     .headerImg {
-
+        width:200px;
     }
     .headerNav {
         .headerNavList {
@@ -27,6 +27,7 @@ header {
             justify-content: space-around;
             list-style: none;
             .headerNavLink {
+                color: black;
                 font-size: 30px;
                 text-decoration: none;
             }
@@ -60,16 +61,17 @@ Main {
             margin-bottom: 1em;
             .produitCardFigureImg {
                 width:100%;
-                height:500px;
+                height:350px;
                 margin: 0;
-                object-fit: cover;
+                
                 border-radius: 1em 1em 0 0;
             }
             .produitCardFigureFigcaption {
                 background-color: $tertiary;
-                height:100px;
+                height:70px;
                 margin-top: -0.4em;
                 border-radius: 0 0 1em 1em;
+                padding-top:1em;
                 .produitCardTitle {
                     font-size: 25px;
                     font-weight: bold;
@@ -84,6 +86,7 @@ Main {
                     font-size: 20px;
                     font-weight: bold;
                     width:100%;
+                    margin:0 ;
 
                 }
             }
@@ -91,6 +94,7 @@ Main {
     }
 }
 @media screen and (min-width: 700px) {
+    main {
     .produits {
         width:100%;
         display: flex;
@@ -98,17 +102,23 @@ Main {
         flex-wrap: wrap;
         justify-content: space-evenly;
         .produitCardFigure {
-            margin: 0;
+            margin: 1em;
             max-width:400px;
         }
     }
+}
 
 }
 footer {
     background-color: $primary;
     margin: 0;
+    font-size:30px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 1em;
     p {
-        margin:0;
+        margin: 0.5em;
     }
     ul {
         list-style: none;
