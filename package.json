@@ -1,21 +1,15 @@
 {
-  "name": "orinoco",
+  "name": "orinoco-backend",
   "version": "1.0.0",
-  "description": "Orinoco",
-  "main": "index.js",
+  "description": "",
+  "main": "server.js",
   "scripts": {
-    "sass": "sass --watch ./sass/main.scss: ./public/css/style.css",
-    "prefix": "post.css ./public/css/style.css --use autoprefixer -d ./public/css/prefixed/"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/fredt-OP/FredericTisserand_5_12042021.git"
-  },
-  "author": "Tisserand Frederic",
+  "author": "",
   "license": "ISC",
-  "browserslist": "last 4 versions",
-  "bugs": {
-    "url": "https://github.com/fredt-OP/FredericTisserand_5_12042021/issues"
-  },
-  "homepage": "https://github.com/fredt-OP/FredericTisserand_5_12042021#readme"
+  "dependencies": {
+    "express": "^4.16.4",
+    "uuid": "^3.3.2"
+  }
 }

@@ -38,8 +38,8 @@ Main {
   margin: 0;
   color: black;
   background-color: white;
-  background-image: url(../../JWDP5-master/images/textureBois.jpg);
-  /*background-attachment:fixed;*/
+  background-image: url(/images/textureBois.jpg);
+  background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
 }
