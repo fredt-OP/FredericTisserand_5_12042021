@@ -7,6 +7,14 @@
         <meta name="description" content=""> <!-- a remplir-->
         <meta name="keywords" content=""> <!-- a remplir-->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link
+        rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+        crossorigin="anonymous"
+        >
+
         <link rel="stylesheet" href="public/css/style.css" media="screen" /> <!-- ceci est le lien vers mon fichier css -->
         <link href="fontAwesome/css/all.min.css" rel="stylesheet">
         <link rel = "preconnect" href = "https://fonts.gstatic.com">
@@ -16,7 +24,7 @@
     <body>
         
     <!-- header -->
-        <Header class="header">
+        <header class="header">
             <img class="headerImg" src="JWDP5-master/images/orinoco.png" alt="Orinoco"/>
             
             <!--Navigation-->
@@ -43,16 +51,8 @@
             <div class=title>
                 <h1>Ori'pluches</h1>
             </div>
-            <div class="produits">
-                <figure class="produitCardFigure">
-                    <img class="produitCardFigureImg" src="JWDP5-master/images/teddy_1.jpg" alt="Ourson tout mignon taille moyenne.">
-                    <figcaption class="produitCardFigureFigcaption">
-                        <h3 class="produitCardTitle">Norbert</h3>    
-                        <p class ="produitCardDescript">2900€</p>
-                    </figcaption> 
-                </figure>
-                
-            </div>  
+            <div id="items"></div>
+            
         </main>
     <!-- footer -->    
         <footer>
@@ -61,5 +61,8 @@
                 <li>Nous contacter</li>
             </ul>    
         </footer>
+        <script type="text/javascript" src="Js/ajax.js"></script>
+        <script type="text/javascript" src="Js/class/produit.js"></script>
+        <script type="text/javascript" src="Js/produit.js"></script>
     </body>
 </html>

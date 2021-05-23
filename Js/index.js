@@ -14,9 +14,9 @@ fetch('http://localhost:3000/api/teddies')
       
       // Création de l'élément en HTML //
       getAllTeddies += 
-      `<li class="item">
+      `<li class="item list-unstyled">
         <div class="card mb-3">
-          <div id="cardProduct" class="row g-0">
+          <div id="cardProduct" class="row g-0 text-decoration-none">
             <div class="col-md-4">
               <img src="${response[i].imageUrl}" class="img-thumbnail shadow" alt="Ours en peluche" />
             </div>

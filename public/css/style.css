@@ -4,37 +4,44 @@ body {
   margin: 0 auto;
 }
 
-header {
+.header {
+  font-family: 'Dancing Script', cursive, serif,sans-serif;
   width: 100%;
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   background-color: #264653;
 }
 
-header .headerImg {
+.header .headerImg {
   width: 150px;
   height: 90px;
 }
 
-header .headerNav button {
+.header .headerNav {
+  width: 250px;
+}
+
+.header .headerNav button {
   display: none;
 }
 
-header .headerNav .headerNavList .headerNavLink {
-  width: 200px;
+.header .headerNav .headerNavList .headerNavLink {
   display: flex;
+  padding: 0;
   justify-content: space-around;
   list-style: none;
   font-size: 30px;
   text-decoration: none;
 }
 
-header .headerNav .headerNavList .headerNavLink li a {
+.header .headerNav .headerNavList .headerNavLink li a {
   color: white;
   text-decoration: none;
 }
 
 Main {
+  font-family: 'Dancing Script', cursive, serif,sans-serif;
   margin: 0;
   color: black;
   background-color: white;
@@ -42,6 +49,10 @@ Main {
   background-attachment: fixed;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+Main .items .item {
+  list-style: none;
 }
 
 Main .title {
@@ -54,71 +65,8 @@ Main .title h1 {
   font-size: 60px;
 }
 
-Main .produits {
-  width: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-Main .produits .produitCardFigure {
-  margin: 0;
-  width: 90%;
-  border: 2px solid black;
-  border-radius: 20px;
-  margin-bottom: 1em;
-  box-shadow: 5px 5px 15px 5px #000000;
-}
-
-Main .produits .produitCardFigure .produitCardFigureImg {
-  width: 100%;
-  height: 350px;
-  margin: 0;
-  border-radius: 1em 1em 0 0;
-}
-
-Main .produits .produitCardFigure .produitCardFigureFigcaption {
-  background-color: #fdf0d5;
-  height: 70px;
-  margin-top: -0.4em;
-  border-radius: 0 0 1em 1em;
-  padding-top: 1em;
-}
-
-Main .produits .produitCardFigure .produitCardFigureFigcaption .produitCardTitle {
-  font-size: 25px;
-  font-weight: bold;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  margin: 0;
-}
-
-Main .produits .produitCardFigure .produitCardFigureFigcaption .produitCardDescript {
-  display: flex;
-  justify-content: center;
-  font-size: 20px;
-  font-weight: bold;
-  width: 100%;
-  margin: 0;
-}
-
-@media screen and (min-width: 700px) {
-  main .produits {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
-  }
-  main .produits .produitCardFigure {
-    margin: 1em;
-    max-width: 400px;
-  }
-}
-
 footer {
+  font-family: 'Dancing Script', cursive, serif,sans-serif;
   background-color: #264653;
   margin: 0;
   font-size: 30px;
