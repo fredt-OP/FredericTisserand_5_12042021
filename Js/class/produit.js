@@ -1,6 +1,6 @@
 class Product {
-    construtor(id, lenseSelected) {
-        this.lenses = lenseSelected;
+    construtor(id, colorsSelected) {
+        this.colors = colorsSelected;
         this.id = id;
     }
 }

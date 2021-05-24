@@ -26,9 +26,9 @@ function addBasketProduct(
         btn.setAttribute("class", "bg-light text-dark");
         btn.setAttribute("data-id", productInfo._id);
         
-        const divLenses = document.createElement("div");
-        divLenses.setAttribute("class", "col-md-3");
-        divLenses.innerHTML = productBasket.lenses;
+        const divcolors = document.createElement("div");
+        divcolors.setAttribute("class", "col-md-3");
+        divcolors.innerHTML = productBasket.colors;
         
         const divPrice = document.createElement("div");
         divPrice.setAttribute("class", "col-md-3");
@@ -55,7 +55,7 @@ productContainer.appendChild(divTitle)
 divTitle.appendChild(name);
 divTitle.appendChild(image);
 divTitle.appendChild(btn);
-productContainer.appendChild(divLenses);
+productContainer.appendChild(divcolors);
 productContainer.appendChild(divPrice);
 container.appendChild(productContainer);
 
@@ -152,7 +152,7 @@ function sendOrder() {
         idOrder.push(basketContent[i].id);
     }
     const command = new orderinfo(formInformation, idOrder);
-    post("http://localhost:3000/api/Teddy/order", command)
+    post("http://localhost:3000/api/teddies/order", command)
         .then(function (reponse) {
             localStorage.setItem("basketContent", JSON.stringify([]));
             localStorage.setItem("orderConfirmation", reponse.orderId);
@@ -180,7 +180,7 @@ function emptyBasketMessage(container) {
 
 //
 
-get("http://localhost:3000/api/Teddy/")
+get("http://localhost:3000/api/teddies/")
     .then(function (response) {
         //ajouter un élément au panier
         const basketContent = JSON.parse(localStorage.getItem("basketContent")); //récupération local storage
@@ -219,7 +219,7 @@ get("http://localhost:3000/api/Teddy/")
 
     // Message d'erreur formulaire de validation
 
-    //const btn = document.getElementById("btn");
+    const btn = document.getElementById("btn");
 
     btn.addEventListener("click", function (event) {
         event.preventDefault();

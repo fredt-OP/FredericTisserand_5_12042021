@@ -6,14 +6,14 @@ function getId() {
 }
 
 //Ajoute le produit dans le panier avec la couleur
-function addToBasket(lenseSelected) {
+function addToBasket(colorsSelected) {
     let basketContent = JSON.parse(localStorage.getItem("basketContent"));
     if (basketContent === null) {
         basketContent = [];
     }
 
     //Produit ahouter au local storage
-    let product = new Product(id, lenseSelected);
+    let product = new Product(id, colorsSelected);
 
     basketContent.push(product);
     localStorage.setItem("basketContent", JSON.stringify(basketContent));
@@ -45,11 +45,11 @@ function addProductInfo(response) {
     price.innerHTML = response.price + "€";
 
     //choix couleurs
-    const lenses = document.createElement("select");
+    const colors = document.createElement("select");
 
     const optionDefault = document.createElement("option");
     optionDefault.innerHTML = "Merci de choisir une option";
-    lenses.appendChild(optionDefault);
+    colors.appendChild(optionDefault);
 
     //Alerte ajout panier
     const btn = document.createElement("button");
@@ -58,29 +58,29 @@ function addProductInfo(response) {
     //Ajout d'élément au local storage
     btn.addEventListener("click", function () {
         const lense = document.getElementById("select");
-        const lenseSelected = lenses[0].value;
+        const colorsSelected = colors[0].value;
 
-        addToBasket(lenseSelected);
+        addToBasket(colorsSelected);
         alert("ajouté au panier");
     });
 
-    for (let i= 0; i < response.lenses.length; i = i +1) {
+    for (let i= 0; i < response.colors.length; i = i +1) {
         const option = document.createElement("option");
-        option.setAttribute("value", response.lenses[i]);
-        option.innerHTML = response.lenses[i];
-        lenses.appendChild(option);
+        option.setAttribute("value", response.colors[i]);
+        option.innerHTML = response.colors[i];
+        colors.appendChild(option);
     }
     // arboresence
     container.appendChild(div);
     div.appendChild(title);
     div.appendChild(img);
     div.appendChild(legend);
-    div.appendChild(lenses);
+    div.appendChild(colors);
     div.appendChild(price);
     div.appendChild(btn);
 }
 const id = getId();
-get("http://localhost:3000/api/Teddy" + id)
+get("http://localhost:3000/api/teddies" + id)
     .then(function (response) {
         addProductInfo(response);
     })
